@@ -950,7 +950,7 @@ class Sniffer:
 		It uses the PacketHandler.process function.
 		Call this function to begin actual sniffing + injection. 
 		'''
-		q = Queue()
+		q = Queue.Queue()
 		sniffer = Thread(target = self.sniff, args = (q,))
 		sniffer.daemon = True
 		sniffer.start()
